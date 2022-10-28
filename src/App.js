@@ -7,7 +7,6 @@ import Accounts from './components/Accounts';
 import User from './components/User';
 import Fixed from './components/Fixed';
 import Current from './components/Current';
-import Pagination from './components/Pagination';
 import { useState, useEffect } from 'react';
 
 export default function App() {
@@ -56,7 +55,6 @@ export default function App() {
           <Route path='User' element={<User data={currentPages} loading={loading} />} />
           <Route path='*' element={<Errorpage />} />
         </Routes>
-        <Pagination userPerPage={userPerPage} totalPage={data.length}/>
     </div>
   );
 }
